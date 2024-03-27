@@ -20,7 +20,7 @@ abstract class Template {
    int common(int min, int max) {
       int sum = 0;
       for (int i = min; i <= max; i++) {
-    	  apply(i)
+    	  sum += apply(i)
       }
       return sum;
    }
@@ -32,8 +32,7 @@ class M1 extends Template {
 
    @Override
    int apply(int i) {
-      i += i;
-      return 0;
+      return i;
    }
 }
 
@@ -41,7 +40,6 @@ class M2 extends Template {
 
    @Override
    int apply(int i) {
-      i += i * i;
-      return 0;
+      return i * i;
    }
 }
